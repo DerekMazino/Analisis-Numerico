@@ -2,6 +2,10 @@ def pol(x):
     valor=(x**2-8*x+25)/3
     #print('f('+str(round(x,5))+')={:.5f}'.format(valor))
     return valor
+def pol1(x):
+    valor=(11*x**3-141*x**2+556*x-546)/30
+    #print('f('+str(round(x,5))+')={:.5f}'.format(valor))
+    return valor
 def puntofijo(f, p0, tol, n):
     i = 1
     while i <=n:
@@ -17,3 +21,7 @@ print("Resultado 1: \n")
 puntofijo(pol, 3.15, 10e-10, 100)
 print("Resultado 2: \n")
 puntofijo(pol, 3.25, 10e-10, 100)
+print("Resultado 3: \n")
+puntofijo(pol1, 4.1, 10e-10, 100)
+print("Resultado 4: \n")
+puntofijo(pol1, 6.96, 10e-10, 100)
