@@ -52,6 +52,26 @@ def pol4prima(x):
     print('fp('+str(round(x,5))+')={:.5f}'.format(valor))
     return valor
 
+def par182(x):
+    valor=x**2-5*x-90
+    print('fp('+str(round(x,5))+')={:.5f}'.format(valor))
+    return valor
+
+def par182prima(x):
+    valor=2*x-5
+    print('fp('+str(round(x,5))+')={:.5f}'.format(valor))
+    return valor
+
+def par191(x):
+    valor=x**3-50*x+exp(-x/2)
+    print('fp('+str(round(x,5))+')={:.5f}'.format(valor))
+    return valor
+
+def par191prima(x):
+    valor=3*x**2-50-exp(-x/2)/2
+    print('fp('+str(round(x,5))+')={:.5f}'.format(valor))
+    return valor
+
 def newton(f, fprima, p0, tol, n):
     i=1
     while i<=n:
@@ -69,6 +89,6 @@ def newton(f, fprima, p0, tol, n):
 #print('Respusta es: \n')
 #newton(pol, polprima, 2.1, 10e-4, 7)
 print('Resopuesta punto 3 Nuevo\n')
-newton(pol4, pol4prima, 2.1, 10e-6, 4)
+newton(par191, par191prima, -3, 10e-4, 7)
 #print('Resopuesta punto 3222 \n')
 #newton(pol1, pol1prima, 1.6, 10e-6, 11)     
